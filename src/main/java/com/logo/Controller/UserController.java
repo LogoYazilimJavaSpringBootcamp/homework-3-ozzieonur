@@ -16,17 +16,22 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    public User createUser(@RequestBody User userRequest) {
+    public User createUser(@RequestBody User userRequest) { // Sisteme kullanıcı ekleyen endpoint
         return userService.createUser(userRequest);
     }
 
+    @GetMapping
+    public List<User> getAllUsers() { // Tüm kullanıcıları getiren endpoint
+        return userService.getAllUsers();
+    }
+
     @GetMapping("/{email}")
-    public User getUserByEmail(@PathVariable String email){
+    public User getUserByEmail(@PathVariable String email){ // Email'e göre kullanıcı getiren endpoint
         return userService.getUserByEmail(email);
     }
 
     @GetMapping("/{email}/customers")
-    public List<Customer> getCustomersUserByEmail(@PathVariable String email){
+    public List<Customer> getCustomersUserByEmail(@PathVariable String email){ // Kullanıcının müşterilerini getiren endpoint
         return userService.getCustomersByEmail(email);
     }
 }

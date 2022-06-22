@@ -16,9 +16,9 @@ public class UserRepository {
     private static List<User> userList = new ArrayList<>();
 
     public User save(User request) {
-        request.getCustomerList().add(new Customer("Onur",23, new ArrayList<>()));
-        request.getCustomerList().add(new Customer("Ufuk",23, new ArrayList<>()));
-        request.getCustomerList().add(new Customer("Enes",23, new ArrayList<>()));
+        request.getCustomerList().add(new Customer("Onur",23, true , new ArrayList<>()));
+        request.getCustomerList().add(new Customer("Ufuk",23,true ,new ArrayList<>()));
+        request.getCustomerList().add(new Customer("Enes",23, true ,new ArrayList<>()));
         userList.add(request);
         return request;
     }
