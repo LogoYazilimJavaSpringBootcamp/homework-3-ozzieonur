@@ -1,5 +1,5 @@
 package com.logo.Model.enums;
 
-public enum FirmType {
+public enum CustomerType {
     CORPORATE, INDIVIDUAL
 }

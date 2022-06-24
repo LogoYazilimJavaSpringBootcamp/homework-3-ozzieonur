@@ -25,8 +25,8 @@ public class CustomerController {
        return customerService.getAllCustomers();
     }
 
-    @GetMapping(value = "/state")
-    public List<Customer> getCustomersByState(@RequestParam boolean isActive){ // Aktif ve pasif müşterileri getiren endpoint
+    @GetMapping(value = "/state/{isActive}")
+    public List<Customer> getCustomersByState(@PathVariable("isActive") boolean isActive){ // Aktif ve pasif müşterileri getiren endpoint
       return customerService.getCustomersByState(isActive);
     }
 

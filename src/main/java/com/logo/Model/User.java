@@ -1,6 +1,6 @@
 package com.logo.Model;
 
-import com.logo.Model.enums.FirmType;
+import com.logo.Model.enums.CustomerType;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -12,7 +12,6 @@ public class User {
     private String surname;
     private String email;
     private String password;
-    private FirmType firmType;
     private Adress adress;
     private List<Customer> customerList = new ArrayList<>(10);
 }

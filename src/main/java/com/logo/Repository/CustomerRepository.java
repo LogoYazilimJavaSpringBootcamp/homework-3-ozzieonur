@@ -25,10 +25,12 @@ public class CustomerRepository {
         return customerList;
     }
 
-    public Customer update(int id, Customer customerRequest) {
+    public Customer update(int id, Customer customerRequest) { // 1. yol = customerList üzerinden set yapma işlemi ile update atma.
+                                                               // 2.yol için Invoice Repository -> update metoduna bakabilirsiniz.
 
         int indexOf = customerList.indexOf(customerList.stream().filter(customer -> customer.getId() == id).findFirst().orElseThrow());
 
+        customerRequest.setId(id);
         customerList.set(indexOf, customerRequest);
 
         return customerRequest;
@@ -49,6 +51,7 @@ public class CustomerRepository {
     }
 
     public Customer findById(int id) {
+
         return customerList.stream().filter(customer -> customer.getId() == id).findFirst().orElseThrow();
     }
 }
