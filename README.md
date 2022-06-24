@@ -238,7 +238,7 @@ Web servis yapısı farklı platformlar arasındaki iletişimi belirli bir stand
 
 ``SOAP`` dağıtık uygulamalarda ve web servislerin haberleşmesinde kullanılan bir iletişim protokolüdür. XML tabanlı olarak çalışır. Bir soap mesajı genel olarak http protokolleri ile ancak kimi zamanda TCP/IP protokolü ğzerinden gönderilir. 
 Yapısı Envelope, Header ve Body'den oluşur. Envelope Soap mesajının root etiketidir. Head kısmında mesajın meta-data bilgileri, body kısmında mesajın ana içeriği gönderilir. Mesaj alışverişi methodlar üzerinden yapılır.
-Gğvenlik için SOAP hazır fonksiyonlar bulundurur ve kompleks yapısıyla beraber güvenlik açısından daha avantajlı denilebilir.
+Güvenlik için SOAP hazır fonksiyonlar bulundurur ve kompleks yapısıyla beraber güvenlik açısından daha avantajlı denilebilir.
 
 
 ``REST`` içerisinde URL, XML, HTTP, JSON gibi standartları barındırabilen bir mimaridir. SOAP'tan farklı olarak mesaj alışverişini methodlar üzerinden değil http protokolleri üzerinden sağlar. İçerisindeki standart çokluğu sayesinde daha esnek ve kullanışlı bir yapıya sahiptir.
